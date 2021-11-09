@@ -42,7 +42,7 @@ pip install your-library-name
 4. Then run the follwing commands to run the application:
 
 ```
-set FLASK_APP=chatbot.py
+export FLASK_APP=chatbot.py
 flask run
 ```
 
