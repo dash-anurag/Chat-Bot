@@ -167,7 +167,7 @@
                 "who programmed you"
             ],
             "responses": [
-                "I was made by Karan Malik."
+                "I was made by 4 smart people."
             ]
         },
         {
@@ -219,27 +219,14 @@
             ]
         },
         {
-            "tag": "karan",
-            "patterns": [
-                "who is he",
-                "who is that",
-                "who is karan",
-                "karan malik"
-            ],
-            "responses": [
-                "Head over to his any of his social profiles to find out! Linkedin: www.linkedin.com/in/karan-malik-3a39191a7 Github: https://github.com/Karan-Malik"
-            ]
-        },
-        {
             "tag": "contact",
             "patterns": [
                 "contact developer",
-                "contact karan",
                 "contact programmer",
                 "contact creator"
             ],
             "responses": [
-                "You can contact my creator at his Linkedin profile : www.linkedin.com/in/karan-malik-3a39191a7"
+                "Contact us on: 123456789"
             ]
         },
         {
@@ -283,17 +270,6 @@
             ],
             "responses": [
                 "..."
-            ]
-        },
-        {
-            "tag": "inspire",
-            "patterns": [
-                "who inspires you",
-                "who is your inspiration",
-                "who motivates you"
-            ],
-            "responses": [
-                "Personally, I find Karan very inspiring. I might not be very fair though.."
             ]
         },
         {
@@ -385,7 +361,7 @@
                 "how old are you","when were you made","what is your age"
             ],
             "responses": [
-                "I was made in 2020, if that's what you are asking!"
+                "I was made in 2021, if that's what you are asking!"
             ]
         }
     ]
