@@ -17,6 +17,7 @@ import billboard
 import time
 from pygame import mixer
 import COVID19Py
+import pyjokes
 
 from nltk.stem import WordNetLemmatizer
 lemmatizer=WordNetLemmatizer()
@@ -65,7 +66,10 @@ def get_response(return_list,intents_json,text):
         x+=str(dt.strftime("%H:%M:%S"))
         return x,'datetime'
 
-
+    if tag=='jokes':
+        x=''
+        x += pyjokes.get_joke()
+        return x, 'jokes'
 
     if tag=='weather':
         x=''
