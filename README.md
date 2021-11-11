@@ -11,7 +11,7 @@ Among other things, the bot can:
 5. Get the top ten globally popular songs at that moment
 6. Set a timer for you and so on
 
-#### To check the complete list of capabilities and how to access them, type 'help' in the message box.
+#### To check the complete list of capabilities and how to access them, type 'help' in the message box
 
 ## Dataset
 
