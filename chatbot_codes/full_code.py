@@ -8,7 +8,7 @@ from keras.models import Sequential
 from keras.layers import Dense,Dropout,Activation
 import random
 import datetime
-from googlesearch import *
+# from googlesearch import *
 import webbrowser
 import requests
 from pycricbuzz import Cricbuzz
@@ -129,11 +129,12 @@ def get_response(return_list,intents_json):
         print (time.strftime("%d %B %Y"))
         print (time.strftime("%H:%M:%S"))
 
-    if tag=='google':
-        query=input('Enter query...')
-        chrome_path = r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %s'
-        for url in search(query, tld="co.in", num=1, stop = 1, pause = 2):
-            webbrowser.open("https://google.com/search?q=%s" % query)
+    # if tag=='google':
+    #     query=input('Enter query...')
+    #     chrome_path = r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %s'
+    #     for url in search(query, tld="co.in", num=1, stop = 1, pause = 2):
+    #         webbrowser.open("https://google.com/search?q=%s" % query)
+
     if tag=='weather':
         api_key='987f44e8c16780be8c85e25a409ed07b'
         base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -157,12 +158,6 @@ def get_response(return_list,intents_json):
         for i in range(10): 
             print(i + 1, results[i][0])
             print(results[i][1],'\n')
-            
-    if tag=='cricket':
-        c = Cricbuzz()
-        matches = c.matches()
-        for match in matches:
-            print(match['srs'],' ',match['mnum'],' ',match['status'])
     
     if tag=='song':
         chart=billboard.ChartData('hot-100')

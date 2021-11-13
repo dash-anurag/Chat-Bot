@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Chat with Ted</title>
+    <title>Chat with Bot</title>
     <link
       rel="icon"
       href="https://image.flaticon.com/icons/svg/2597/2597330.svg"
@@ -183,7 +183,7 @@
       <header class="msger-header">
         <div class="msger-header-title">
           <i></i>
-          <p style="font-size: 22px"><b>TED </b></p>
+          <p style="font-size: 22px"><b>Chat-Bot </b></p>
           <p><i></i></p>
         </div>
       </header>
@@ -199,12 +199,12 @@
 
           <div class="msg-bubble">
             <div class="msg-info">
-              <div class="msg-info-name">Ted</div>
-              <div class="msg-info-time">12:45</div>
+              <div class="msg-info-name">Bot</div>
+              <div id="time1" class="msg-info-time"></div>
             </div>
 
             <div class="msg-text">
-              Hey, I am Ted. Type below to talk to me...
+              Hi, I am Bot. How can I help you ?
             </div>
           </div>
         </div>
@@ -225,6 +225,7 @@
     <!-- partial -->
     <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
     <script>
+      document.getElementById("time1").innerHTML = formatDate(new Date())
       function play() {
         var audio = new Audio("Handbell-ringing-sound-effect.mp3");
         audio.play();
@@ -238,7 +239,7 @@
       const BOT_IMG = "https://image.flaticon.com/icons/svg/2597/2597330.svg";
       const PERSON_IMG =
         "https://image.flaticon.com/icons/svg/3048/3048122.svg";
-      const BOT_NAME = "Ted";
+      const BOT_NAME = "Bot-tas";
       const PERSON_NAME = "You";
 
       msgerForm.addEventListener("submit", (event) => {
@@ -305,17 +306,6 @@
         return `${h.slice(-2)}:${m.slice(-2)}`;
       }
     </script>
-    <p
-      style="
-        position: fixed;
-        bottom: 0;
-        left: 5px;
-        bottom: 14px;
-        font-size: 14px;
-      "
-    >
-      <a href="/">Go to Main Page</a>
-    </p>
 
   </body>
 </html>

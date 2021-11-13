@@ -5,7 +5,6 @@ from chatbot.__init__ import model,words,classes,intents
 
 import nltk
 import pickle
-import json
 import numpy as np
 from keras.models import Sequential,load_model
 import random
@@ -13,6 +12,8 @@ from datetime import datetime
 import pytz
 import requests
 import os
+from pycricbuzz import Cricbuzz
+import json
 import billboard
 import time
 from pygame import mixer
@@ -105,12 +106,6 @@ def get_response(return_list,intents_json,text):
 
         return x,'news'
 
-    if tag=='cricket':
-        c = Cricbuzz()
-        matches = c.matches()
-        for match in matches:
-            print(match['srs'],' ',match['mnum'],' ',match['status'])
-
     if tag=='song':
         chart=billboard.ChartData('hot-100')
         x='The top 10 songs at the moment are: \n'
@@ -172,11 +167,6 @@ def response(text):
 @app.route('/',methods=['GET','POST'])
 #@app.route('/home',methods=['GET','POST'])
 def yo():
-    return render_template('main.html')
-
-@app.route('/chat',methods=['GET','POST'])
-#@app.route('/home',methods=['GET','POST'])
-def home():
     return render_template('index.html')
 
 @app.route("/get")
