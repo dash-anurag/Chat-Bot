@@ -23,42 +23,42 @@ To run it locally on your system, follow these steps:
 
 1. Clone this repository onto your system. On Command Prompt, run the following command:
 
-```
-git clone git@github.com:dash-anurag/Chat-Bot.git
-```
+    ```
+    git clone git@github.com:dash-anurag/Chat-Bot.git
+    ```
 
 2. Change your directory to Chatbot:
 
-```
-cd Chatbot
-```
+    ```
+    cd Chatbot
+    ```
 
 3. Make sure you have all the required libraries listed in requirements.txt. In case any of the libraries are missing, install them using pip. Type this command into your Command Prompt, replacing 'your-library-name' by the required library name:
 
-```
-pip install your-library-name
-```
+    ```
+    pip install your-library-name
+    ```
 
 4. Download the nltk libraries by opening python shell and running the following commands to download libraries
 listed in nltk.txt:
 
-```
-nltk.download('punkt')
-nltk.download('wordnet')
-```
+    ```
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    ```
 
 5. Then run the follwing commands to run the application:
 
-For Linux: 
-```
-export FLASK_APP="chatbot.py"
-flask run
-```
+    For Linux: 
+    ```
+    export FLASK_APP="chatbot.py"
+    flask run
+    ```
 
-For Windows:
-```
-set FLASK_APP="chatbot.py"
-flask run
-```
+    For Windows:
+    ```
+    set FLASK_APP="chatbot.py"
+    flask run
+    ```
 
 6. Enter the url provided after running the previous commands into your web browser
