@@ -11,11 +11,11 @@ Among other things, the bot can:
 5. Get the top ten globally popular songs at that moment
 6. Set a timer for you and so on
 
-#### To check the complete list of capabilities and how to access them, type 'help' in the message box
+### To check the complete list of capabilities and how to access them, type 'help' in the message box
 
 ## Dataset
 
-The dataset used for training was self-populated and is stored as Intents.json in chatbot_codes. The data from this file was used to create the pickle files for words and classes. The pre-trained model with weights is available as mymodel.h5 in the same file.
+The dataset used for training was self-populated and is stored as intents.json in model_codes. The data from this file was used to create the pickle files for words and classes. The pre-trained model with weights is available as mymodel.h5 in the same file.
 
 ## How to Use on your System
 
@@ -47,5 +47,3 @@ flask run
 ```
 
 5. Enter the url provided after running the previous commands into your web browser
-
-<!-- This is a trial feature -->
