@@ -39,11 +39,26 @@ cd Chatbot
 pip install your-library-name
 ```
 
-4. Then run the follwing commands to run the application:
+4. Download the nltk libraries by opening python shell and running the following commands to download libraries
+listed in nltk.txt:
 
 ```
-export FLASK_APP=chatbot.py
+nltk.download('punkt')
+nltk.download('wordnet')
+```
+
+5. Then run the follwing commands to run the application:
+
+For Linux: 
+```
+export FLASK_APP="chatbot.py"
 flask run
 ```
 
-5. Enter the url provided after running the previous commands into your web browser
+For Windows:
+```
+set FLASK_APP="chatbot.py"
+flask run
+```
+
+6. Enter the url provided after running the previous commands into your web browser
