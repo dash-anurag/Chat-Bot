@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Chat with Ted</title>
+    <title>Chat with Bot</title>
     <link
       rel="icon"
       href="https://image.flaticon.com/icons/svg/2597/2597330.svg"
@@ -17,11 +17,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       :root {
-        --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        --msger-bg: #fff;
-        --border: 2px solid #ddd;
-        --left-msg-bg: #ececec;
-        --right-msg-bg: #579ffb;
+        --body-bg: linear-gradient(135deg, #a2a5aa 0%, #87909e 100%);
+        --msger-bg: rgb(131, 136, 141);
+        --border: 2px solid rgb(87, 85, 85);
+        --left-msg-bg: #7C7F91;
+        --right-msg-bg: #248FF0;
       }
 
       html {
@@ -37,7 +37,7 @@
       }
 
       body {
-        background-image: url(https://media.istockphoto.com/photos/light-blue-background-with-pattern-picture-id624409380?k=6&m=624409380&s=612x612&w=0&h=XYHFBLtqTp3EMuKDtJMzTW5wTzkFbalhfArb14U6mWI=);
+        background-image: url(https://www.ceps.eu/wp-content/uploads/2021/04/AI-s-1300x731.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         backface-visibility: hidden;
@@ -70,8 +70,8 @@
         padding: 10px;
         text-align: center;
         border-bottom: var(--border);
-        background: #eee;
-        color: #666;
+        background: #3c384d;
+        color: #8d8db4;
       }
 
       .msger-chat {
@@ -83,7 +83,7 @@
         width: 6px;
       }
       .msger-chat::-webkit-scrollbar-track {
-        background: #ddd;
+        background: rgb(162, 176, 196);
       }
       .msger-chat::-webkit-scrollbar-thumb {
         background: #bdbdbd;
@@ -98,7 +98,7 @@
         width: 50px;
         height: 50px;
         margin-right: 10px;
-        background: #ddd;
+        background: rgb(116, 119, 122);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -169,7 +169,7 @@
       }
 
       .msger-chat {
-        background-color: white;
+        background-color: #3c384d;
         /*background-image: url("https://th.bing.com/th/id/OIP.igHaNytA8mbd1lbiEeJ8MAHaEK?w=296&h=166&c=7&o=5&dpr=1.25&pid=1.7");*/
         background-repeat: no-repeat;
         background-size: cover;
@@ -183,7 +183,7 @@
       <header class="msger-header">
         <div class="msger-header-title">
           <i></i>
-          <p style="font-size: 22px"><b>TED </b></p>
+          <p style="font-size: 22px"><b>Chat-Bot </b></p>
           <p><i></i></p>
         </div>
       </header>
@@ -199,12 +199,12 @@
 
           <div class="msg-bubble">
             <div class="msg-info">
-              <div class="msg-info-name">Ted</div>
-              <div class="msg-info-time">12:45</div>
+              <div class="msg-info-name">Bot</div>
+              <div id="time1" class="msg-info-time"></div>
             </div>
 
             <div class="msg-text">
-              Hey, I am Ted. Type below to talk to me...
+              Hi, I am Bot. How can I help you ?
             </div>
           </div>
         </div>
@@ -225,6 +225,7 @@
     <!-- partial -->
     <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
     <script>
+      document.getElementById("time1").innerHTML = formatDate(new Date())
       function play() {
         var audio = new Audio("Handbell-ringing-sound-effect.mp3");
         audio.play();
@@ -238,16 +239,16 @@
       const BOT_IMG = "https://image.flaticon.com/icons/svg/2597/2597330.svg";
       const PERSON_IMG =
         "https://image.flaticon.com/icons/svg/3048/3048122.svg";
-      const BOT_NAME = "Ted";
+      const BOT_NAME = "Bot";
       const PERSON_NAME = "You";
 
       msgerForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const msgText = msgerInput.value;
-        temp = msgText.split(":");
+        temp = msgText.split(" ");
         if (temp[0].toLowerCase().trim() == "google") {
-          search = "https://www.google.com/search?q=" + temp[1].trim();
+          search = "https://www.google.com/search?q=" + msgText.substring(7);
           window.open(search);
         }
         if (!msgText) return;
@@ -305,17 +306,6 @@
         return `${h.slice(-2)}:${m.slice(-2)}`;
       }
     </script>
-    <p
-      style="
-        position: fixed;
-        bottom: 0;
-        left: 5px;
-        bottom: 14px;
-        font-size: 14px;
-      "
-    >
-      <a href="/">Go to Main Page</a>
-    </p>
 
   </body>
 </html>

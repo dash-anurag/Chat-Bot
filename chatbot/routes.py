@@ -105,12 +105,6 @@ def get_response(return_list,intents_json,text):
 
         return x,'news'
 
-    if tag=='cricket':
-        c = Cricbuzz()
-        matches = c.matches()
-        for match in matches:
-            print(match['srs'],' ',match['mnum'],' ',match['status'])
-
     if tag=='song':
         chart=billboard.ChartData('hot-100')
         x='The top 10 songs at the moment are: \n'
@@ -172,7 +166,7 @@ def response(text):
 @app.route('/',methods=['GET','POST'])
 #@app.route('/home',methods=['GET','POST'])
 def yo():
-    return render_template('main.html')
+    return render_template('index.html')
 
 @app.route('/chat',methods=['GET','POST'])
 #@app.route('/home',methods=['GET','POST'])
