@@ -95,6 +95,7 @@ def get_response(return_list,intents_json,text):
         results = []
         x=''
         for ar in article:
+            ar["url"] = "<a href=" + ar["url"] + " target=" + "_blank" + ">" + ar["url"] + "</a>"
             results.append([ar["title"],ar["url"]])
 
         for i in range(10):
